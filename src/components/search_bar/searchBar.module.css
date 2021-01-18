@@ -1,0 +1,38 @@
+header {
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+.searchBarLogo {
+  margin: 0 0.5rem;
+}
+
+.searchBarTitle {
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.searchBarForm {
+  flex-grow: 1;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  align-items: center;
+}
+.searchBarInput {
+  flex-basis: 100%; /*flexbox안에서 항상 가득 찬 상태*/
+  outline: 0;
+}
+
+.searchButton {
+  background-color: slategrey;
+  outline: 0;
+}
+
+.searchBarSearchIcon {
+  width: 1rem;
+  border: 0;
+  cursor: pointer;
+}
