@@ -6,6 +6,8 @@
   display: flex;
 }
 
+/* flex grow flex shrink flex basis*/
+/* 均等にのびるじじむ */
 .detail {
   flex: 1 1 70%;
 }

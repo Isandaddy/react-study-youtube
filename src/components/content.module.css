@@ -1,23 +1,33 @@
 .content {
   display: flex;
   justify-content: start;
-  width: 50%;
+
   border: 1px solid white;
   align-items: center;
   transition: transform 250ms ease-in;
   cursor: pointer;
+  margin: 0.1rem;
+}
+
+.content.grid {
+  width: 49%;
+}
+
+.content.list {
+  width: 100%;
 }
 
 .content:hover {
   transform: scale(1.02);
 }
 .contentThumbnail {
-  width: 40%;
+  /* width: 40%; */
   margin: 0.1rem;
 }
 
 .contentDiscription {
   width: 100%;
+  margin-left: 0.5rem;
 }
 .contentCreator {
   color: dimgray;
