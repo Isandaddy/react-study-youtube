@@ -6,6 +6,14 @@
   display: flex;
 }
 
+@media screen and (max-width: 768px) {
+  /* モバイル画面状態 */
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /* flex grow flex shrink flex basis*/
 /* 均等にのびるじじむ */
 .detail {

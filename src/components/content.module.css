@@ -1,8 +1,10 @@
 .content {
   display: flex;
   justify-content: start;
-
-  border: 1px solid white;
+  /* box-shadow: 3px 3px 10px 3px #2b2b2b; */
+  border: 1px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  border-right: 2px solid lightgray;
   align-items: center;
   transition: transform 250ms ease-in;
   cursor: pointer;
