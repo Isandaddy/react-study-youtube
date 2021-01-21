@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import SearchBar from "./components/search_bar/searchBar";
 import ContentsSection from "./components/contentsSection";
 import Detail from './components/detail/detail';
@@ -13,21 +13,26 @@ function App({youtube}) {
     setSeletedVideo(video);
   }
 
-  const search = query => {
+  const search = useCallback(query => {
     setSeletedVideo(null);
     youtube.search(query)//
     .then(videos => setVideos(videos));
-  };
+  },[youtube]);
+
+  const mostPopular = useCallback(() => {
+    setSeletedVideo(null);
+    youtube.mostPopular()//
+    .then(videos => setVideos(videos));
+  },[youtube]);
 
   useEffect(()=>{
     console.log('useEffect');
-    youtube.mostPopular()//
-    .then(videos => setVideos(videos));
+    mostPopular();
   },[]);
 
   return (
     <div className={styles.app}>
-      <SearchBar onSearch={search}/>
+      <SearchBar onSearch={search} mostPopular={mostPopular}/>
       <section className={styles.content}>
         {
           seletedVideo && 
