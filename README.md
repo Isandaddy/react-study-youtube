@@ -43,3 +43,32 @@ const memoizedCallback = useCallback(
 .searchBar の瀬能改善
 function component は state と props が変わると定義している定義しているメンバー変数も変わるつまりリーレンダリングが発生する。  
 子 component に callback を props として渡すと
+
+- 20210122
+
+### axios
+
+.ref  
+[axios](https://xn--xy1bk56a.run/axios/)
+
+fetch -> axios に変換
+fetch と違い json 変換自動にしてくれる。　　　
+あらゆるブラウザーに互換する。
+
+```
+const httpClient = axios.create({
+  baseURL : 'https://youtube.googleapis.com/youtube/v3',
+  params : {key: process.env.REACT_APP_YOUTUBE_API_KEY},
+});
+
+const youtube = new Youtube(httpClient);
+ReactDOM.render(
+  <React.StrictMode>
+    <App youtube={youtube}/>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+```
+
+index.js で
+上記のコードを injection する。

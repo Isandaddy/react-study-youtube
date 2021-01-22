@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback} from "react";
 import SearchBar from "./components/search_bar/searchBar";
-import ContentsSection from "./components/contentsSection";
+import ContentsSection from "./components/content_section/contentsSection";
 import Detail from './components/detail/detail';
 import styles from './app.module.css';
 //필요힌 네트워크 통신을 외부에서 받아온다.의존성 주입
